@@ -1,8 +1,7 @@
-//import { init } from './mongo.js'
+import { init } from './mongo.js'
 import express from 'express'
 import bodyParser from 'body-parser'
 import graphqlHTTP from 'express-graphql'
-console.log('TEsting!!!')
 
 
 //const mongoConnection = init()
