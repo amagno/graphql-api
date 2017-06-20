@@ -14,10 +14,6 @@ var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
 var _graphqlTools = require('graphql-tools');
 
-var _casual = require('casual');
-
-var _casual2 = _interopRequireDefault(_casual);
-
 var _mongoose = require('mongoose');
 
 var _mongoose2 = _interopRequireDefault(_mongoose);
@@ -33,23 +29,6 @@ var schema = 'schema {\n    query: Query\n    mutation: Mutation\n}\ntype Mutati
 
 var typeDefs = [schema];
 
-var mocks = {
-    Query: function Query() {
-        return {
-            users: function users() {
-                return new _graphqlTools.MockList(50);
-            }
-        };
-    },
-    User: function User() {
-        return {
-            id: _mongoose2.default.Types.ObjectId(),
-            name: _casual2.default.name,
-            email: _casual2.default.email,
-            password: _casual2.default.password
-        };
-    }
-};
 var resolvers = {
     Query: {
         users: function () {
@@ -121,7 +100,5 @@ var executableSchema = (0, _graphqlTools.makeExecutableSchema)({
     typeDefs: typeDefs,
     resolvers: resolvers
 });
-
-if (process.env.MOCK_GRAPHQL) (0, _graphqlTools.addMockFunctionsToSchema)({ schema: executableSchema, mocks: mocks });
 
 exports.default = executableSchema;
