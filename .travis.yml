@@ -1,0 +1,7 @@
+language: node_js
+cache: yarn
+install:
+  yarn install --production
+
+script:
+  yarn start
