@@ -5,7 +5,7 @@ import graphqlHTTP from 'express-graphql'
 console.log('TEsting!!!')
 
 
-const mongoConnection = init()
+//const mongoConnection = init()
 
 const app = express()
 const PORT = process.env.PORT ? process.env.PORT : 3000
