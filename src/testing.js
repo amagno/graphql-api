@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import graphqlHTTP from 'express-graphql'
 
 
-//const mongoConnection = init()
+const mongoConnection = init()
 
 const app = express()
 const PORT = process.env.PORT ? process.env.PORT : 3000

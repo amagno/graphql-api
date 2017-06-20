@@ -1,5 +1,7 @@
 'use strict';
 
+var _mongo = require('./mongo.js');
+
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
@@ -14,11 +16,8 @@ var _expressGraphql2 = _interopRequireDefault(_expressGraphql);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log('TEsting!!!'
+var mongoConnection = (0, _mongo.init)();
 
-//const mongoConnection = init()
-
-); //import { init } from './mongo.js'
 var app = (0, _express2.default)();
 var PORT = process.env.PORT ? process.env.PORT : 3000;
 
