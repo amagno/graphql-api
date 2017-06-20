@@ -5,6 +5,7 @@ import graphqlHTTP from 'express-graphql'
 import cors from 'cors'
 import schema from './graphql'
 
+
 const mongoConnection = init()
 
 const app = express()

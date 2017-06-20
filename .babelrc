@@ -1,6 +1,10 @@
 {
   "presets": ["es2015", "stage-2"],
   "plugins": [
-    "babel-plugin-inline-import"
+    "babel-plugin-inline-import",
+     ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
   ]
 }
