@@ -22,8 +22,10 @@ console.log('TEsting!!!'
 var app = (0, _express2.default)();
 var PORT = process.env.PORT ? process.env.PORT : 3000;
 
+var MONGO_URL = process.env.MONGO_URL ? process.env.MONGO_URL : 'Not defined!';
+
 app.get('/', function (req, res) {
-    res.send('Hello World!');
+    res.send('App is running on port ' + PORT + ', Mongo Database: ' + MONGO_URL);
 });
 
 app.listen(PORT, function () {

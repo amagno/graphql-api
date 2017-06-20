@@ -10,8 +10,10 @@ console.log('TEsting!!!')
 const app = express()
 const PORT = process.env.PORT ? process.env.PORT : 3000
 
+const MONGO_URL = process.env.MONGO_URL ? process.env.MONGO_URL : 'Not defined!'
+
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send(`App is running on port ${PORT}, Mongo Database: ${MONGO_URL}`)
 })
 
 app.listen(PORT, () => {
