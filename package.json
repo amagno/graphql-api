@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "nodemon src/testing --exec babel-node",
     "build": "babel src/ -d build",
-    "start": "node build/testing.js"
+    "start": "babel-node src/testing.js"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
