@@ -7,7 +7,7 @@
 /coverage
 
 # production
-
+querys
 # misc
 .DS_Store
 .env.local

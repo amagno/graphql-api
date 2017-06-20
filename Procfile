@@ -1,1 +1,1 @@
-web: NODE_ENV=production MONGO_URL=mongodb://testing:testing@ds157571.mlab.com:57571/testing npm start
+web: NODE_ENV=production MONGO_URL=mongodb://user:test@ds131742.mlab.com:31742/heroku npm start
