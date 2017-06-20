@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - "6"
 cache: yarn
+env:
+ - NODE_ENV=production 
+ - MONGO_URL=mongodb://user:test@ds131742.mlab.com:31742/heroku
 install:
   yarn install --production
 
