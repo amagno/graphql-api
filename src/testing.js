@@ -8,7 +8,7 @@ console.log('TEsting!!!')
 const mongoConnection = init()
 
 const app = express()
-const PORT = process.env.SERVER_PORT ? process.env.SERVER_PORT : 3000
+const PORT = process.env.PORT ? process.env.PORT : 3000
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
