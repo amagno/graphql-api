@@ -1,1 +1,1 @@
-web: npm run build && npm start
+web: NODE_ENV=production MONGO_URL=mongodb://testing:testing@ds157571.mlab.com:57571/testing npm start
